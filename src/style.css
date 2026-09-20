@@ -1,16 +1,53 @@
+@import "tailwindcss";
+
+/*
+  Paleta e tema visual herdados da landing page criada na Sprint 3 de
+  Front-End Design (fundo escuro + dourado), agora aplicados ao projeto
+  inteiro para manter a mesma identidade visual do StudyCam.
+*/
 :root {
-  --cor-fundo: #f4f5f7;
-  --cor-superficie: #ffffff;
-  --cor-texto: #1a1c23;
-  --cor-texto-suave: #6b7280;
-  --cor-borda: #e6e8ec;
-  --cor-destaque: #4f46e5;
-  --cor-destaque-hover: #4338ca;
-  --cor-perigo: #dc2626;
-  --raio: 12px;
-  --raio-pequeno: 8px;
-  --sombra: 0 1px 2px rgba(16, 24, 40, 0.05), 0 1px 3px rgba(16, 24, 40, 0.06);
-  --sombra-hover: 0 4px 12px rgba(16, 24, 40, 0.08);
+  --radius: 0.75rem;
+  --background: oklch(0.14 0 0);
+  --foreground: oklch(0.97 0 0);
+  --card: oklch(0.18 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --primary: oklch(0.84 0.16 92);
+  --primary-foreground: oklch(0.14 0 0);
+  --secondary: oklch(0.22 0 0);
+  --secondary-foreground: oklch(0.97 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.68 0.01 90);
+  --accent: oklch(0.26 0.03 95);
+  --accent-foreground: oklch(0.84 0.16 92);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.97 0 0);
+  --border: oklch(0.28 0.01 90);
+  --input: oklch(0.26 0.01 90);
+  --ring: oklch(0.84 0.16 92);
+  --surface-raised: oklch(0.2 0 0);
+}
+
+@theme inline {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface-raised: var(--surface-raised);
 }
 
 * {
@@ -19,184 +56,8 @@
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  background: var(--cor-fundo);
-  color: var(--cor-texto);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-}
-
-header {
-  padding: 40px 16px 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-#app {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 16px 48px;
-}
-
-#home {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  box-shadow: var(--sombra);
-  padding: 28px;
-}
-
-#home h2 {
-  margin: 0 0 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--cor-texto-suave);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-/* Estatísticas */
-.estatisticas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.estatisticas div {
-  flex: 1 1 auto;
-  background: var(--cor-fundo);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-pequeno);
-  padding: 12px 16px;
-  font-size: 0.85rem;
-  color: var(--cor-texto-suave);
-}
-
-.estatisticas span {
-  color: var(--cor-texto);
-  font-weight: 700;
-}
-
-/* Busca */
-#busca {
-  width: 100%;
-  padding: 11px 14px;
-  margin-bottom: 16px;
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-pequeno);
-  font-family: inherit;
-  font-size: 0.95rem;
-  color: var(--cor-texto);
-  background: var(--cor-fundo);
-  transition: border-color 0.15s ease, background 0.15s ease;
-}
-
-#busca::placeholder {
-  color: #9ca3af;
-}
-
-#busca:focus {
-  outline: none;
-  border-color: var(--cor-destaque);
-  background: var(--cor-superficie);
-}
-
-/* Botão */
-button {
-  font-family: inherit;
-  background: var(--cor-destaque);
-  color: #fff;
-  border: none;
-  border-radius: var(--raio-pequeno);
-  padding: 11px 20px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
-}
-
-button:hover {
-  background: var(--cor-destaque-hover);
-}
-
-button:active {
-  transform: scale(0.98);
-}
-
-#btnCapturar {
-  display: block;
-  margin: 0 0 28px;
-}
-
-/* Lista e cartões de anotação */
-#listaAnotacoes {
-  display: grid;
-  gap: 10px;
-}
-
-.listaVazia {
-  margin: 0;
-  padding: 24px 16px;
-  text-align: center;
-  border: 1px dashed var(--cor-borda);
-  border-radius: var(--raio-pequeno);
-  color: var(--cor-texto-suave);
-  font-size: 0.9rem;
-}
-
-.cartao {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-pequeno);
-  padding: 16px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  transition: box-shadow 0.15s ease, transform 0.15s ease;
-  animation: entrada 0.2s ease;
-}
-
-.cartao:hover {
-  box-shadow: var(--sombra-hover);
-  transform: translateY(-1px);
-}
-
-.cartao h3 {
-  margin: 0 0 6px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.badge {
-  display: inline-block;
-  padding: 3px 10px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.btnExcluir {
-  background: transparent;
-  color: var(--cor-perigo);
-  border: 1px solid #fecaca;
-  padding: 5px 14px;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.btnExcluir:hover {
-  background: var(--cor-perigo);
-  border-color: var(--cor-perigo);
-  color: #fff;
 }
 
 @keyframes entrada {
@@ -210,11 +71,6 @@ button:active {
   }
 }
 
-/* Rodapé */
-footer {
-  margin-top: 28px;
-  padding: 16px;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--cor-texto-suave);
+.animacao-entrada {
+  animation: entrada 0.2s ease;
 }
