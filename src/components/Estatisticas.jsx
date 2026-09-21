@@ -23,16 +23,19 @@ export default function Estatisticas({ anotacoes }) {
   }
 
   return (
-    <div className="estatisticas">
-      <div>
-        Fotos: <span id="totalFotos">{totalFotos}</span>
+    <div className="mb-6 flex flex-wrap gap-2.5 sm:gap-3">
+      <div className="flex-1 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground">
+        Fotos: <span className="font-bold text-foreground">{totalFotos}</span>
       </div>
-      <div>
-        Matérias: <span id="totalMaterias">{totalMaterias}</span>
+      <div className="flex-1 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground">
+        Matérias: <span className="font-bold text-foreground">{totalMaterias}</span>
       </div>
       {categoriaTop && (
-        <div>
-          Mais usada: {categoriaTop} ({percentualTop}%)
+        <div className="flex-1 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground">
+          Mais usada:{" "}
+          <span className="font-bold text-foreground">
+            {categoriaTop} ({percentualTop}%)
+          </span>
         </div>
       )}
     </div>
