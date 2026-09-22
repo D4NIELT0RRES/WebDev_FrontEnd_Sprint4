@@ -1,4 +1,8 @@
-Arthur Canzian Freitas Teodoro - RM: 569828
+SPRINT 4 - FRONT-END DESIGN + WEB DEVELOPMENT
+Projeto: StudyCam - Equipe SafeTech
+
 Pedro Passos Corsini - RM: 573493
-Pedro Thyago - RM: 570939
+Daniel Gomes Torres - RM: 573436
+Arthur Canzian Freitas Teodoro - RM: 569828
+Pedro Thyago Araujo Santos - RM: 570939
 Rodrigo Cocka Poccinelli - RM: 573364
