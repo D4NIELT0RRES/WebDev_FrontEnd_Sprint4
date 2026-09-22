@@ -1,0 +1,12 @@
+[
+  { "id": 1, "texto": "Estude em blocos de 25 minutos com 5 de pausa (técnica Pomodoro) para manter o foco." },
+  { "id": 2, "texto": "Revise uma anotação nas primeiras 24 horas: isso reduz muito o esquecimento." },
+  { "id": 3, "texto": "Explique o conteúdo em voz alta como se estivesse ensinando alguém — se travar, é sinal de revisar." },
+  { "id": 4, "texto": "Troque de matéria a cada sessão de estudo: a alternância ajuda a fixar melhor o conteúdo." },
+  { "id": 5, "texto": "Antes de começar, escreva em uma frase o que você quer conseguir estudar hoje." },
+  { "id": 6, "texto": "Separe as anotações por matéria logo após a aula, enquanto o conteúdo ainda está fresco." },
+  { "id": 7, "texto": "Durma bem antes da prova: memória e atenção pioram muito com poucas horas de sono." },
+  { "id": 8, "texto": "Prefira resumir com suas próprias palavras em vez de só copiar o que está na lousa." },
+  { "id": 9, "texto": "Beba água e faça pausas curtas: cansaço visual reduz o foco sem você perceber." },
+  { "id": 10, "texto": "Revise as matérias com menos anotações recentes: elas tendem a ficar esquecidas primeiro." }
+]

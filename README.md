@@ -16,7 +16,7 @@ mesmo projeto StudyCam entregue na Sprint 3 pelas duas disciplinas:
 - Tailwind CSS 4
 - Context API + hooks customizados (`useAnotacoes`, `useAuth`, `useDicaDoDia`)
 - localStorage (armazenamento das anotações e da sessão de login)
-- Consumo da API pública [Advice Slip API](https://api.adviceslip.com) para a "Dica do dia"
+- Consumo de uma API mockada (`public/dicas.json`, servida pelo próprio projeto) para a "Dica do dia", com dicas de estudo em português
 - JavaScript (módulos ES) / HTML5 / CSS3
 
 ## Como instalar as dependências
@@ -43,8 +43,8 @@ npm run preview
 ## Servidores / Back-end
 
 Não há back-end neste projeto. Os dados das anotações e da sessão de login são salvos no
-`localStorage` do navegador, e a "Dica do dia" é obtida diretamente de uma API pública de
-terceiros pelo navegador.
+`localStorage` do navegador, e a "Dica do dia" é obtida por `fetch` a partir de uma API
+mockada (`public/dicas.json`) com dicas de estudo em português.
 
 ## Usuários e senhas para teste
 

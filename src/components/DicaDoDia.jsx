@@ -1,6 +1,6 @@
 import useDicaDoDia from "../hooks/useDicaDoDia.js";
 
-// Card que consome uma API pública de terceiros (Advice Slip) para
+// Card que consome uma API mockada (JSON com dicas em português) para
 // trazer uma dica diferente a cada vez que o painel é aberto.
 export default function DicaDoDia() {
   const { dica, carregando, erro, buscarDica } = useDicaDoDia();
