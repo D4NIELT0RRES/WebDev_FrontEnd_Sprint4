@@ -92,8 +92,8 @@ App (rotas + AuthProvider)
 
 ## Link do repositório
 
-https://github.com/D4NIELT0RRES/Sprint3-WebDev
+https://github.com/D4NIELT0RRES/WebDev_FrontEnd_Sprint4
 
 ## Link do Deploy na Vercel
 
-https://sprint3-webdev-six.vercel.app
+https://webdev-frontend-sprint4.vercel.app
